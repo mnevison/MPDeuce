@@ -1,0 +1,26 @@
+root{
+    --background-color: #c2e3fe;
+}
+
+
+/* header */
+
+.nav-logo{
+    height: 4rem;
+    padding-left: 3rem;
+    overflow: visible;
+}
+.nav-logo:hover{
+    transform: perspective(5px) translateZ(2);
+    transition-duration: .5s;
+    will-change: transform;
+}
+.navbar-nav{
+    padding-right: 3rem;
+}
+.navbar{
+    color: white !important;
+    height: 3rem;
+    margin: 2rem;
+    border-radius: 50px;
+}
