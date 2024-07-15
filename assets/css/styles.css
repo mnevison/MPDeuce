@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Sigmar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
 
 :root {
   --background-color: #c2e3fe;
   --font-clr-primary: #5a5a87;
+  --font-clr-alt: #92c5eb;
 }
 
 @keyframes bounce {
@@ -19,7 +20,9 @@ body {
   background-color: var(--background-color);
   background-image: url(/assets/images/clouds-background.png);
   background-size: cover;
-  font-family: "Sigmar", sans-serif;
+  font-family: "Margarine", sans-serif;
+  color: var(--font-clr-primary);
+  font-weight: bold;
 }
 
 /* header */
@@ -41,6 +44,9 @@ body {
   color: var(--font-clr-primary) !important;
   font-size: 1.5em;
 }
+.active {
+  color: var(--font-clr-alt) !important;
+}
 .navbar {
   position: relative;
   background-color: white !important;
@@ -58,4 +64,42 @@ body {
   position: absolute;
   right: 10px;
   top: 5px;
+}
+
+/* hero */
+
+.container
+
+.hero-img {
+  height: 500px;
+  width: auto;
+}
+
+.hero-text {
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  border-radius: 54px;
+  border: 11px solid #fff;
+  background: #f8f8ff;
+  box-shadow: 10px 10px 0px 0px #e0fafb;
+  max-width: 485px;
+  width: 100%;
+  padding: 30px 37px;
+  margin-top: 126px;
+  transform: rotate(-5deg) translateX(-10px);
+  top: -10px;
+  left: 350px;
+}
+
+.hero-text h1{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.hero-text p{
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+.secondary-text{
+  color: var(--font-clr-alt);
 }
