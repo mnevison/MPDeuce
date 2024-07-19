@@ -1,9 +1,14 @@
+/* font */
+
 @import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
+
+/* custom styles and keyframes */
 
 :root {
   --background-color: #c2e3fe;
   --font-clr-primary: #5a5a87;
   --font-clr-alt: #92c5eb;
+  --bounce-anim: bounce 2.5s infinite;
 }
 
 @keyframes bounce {
@@ -15,6 +20,8 @@
     transform: translateY(-10px);
   }
 }
+
+/* general styles */
 
 body {
   background-color: var(--background-color);
@@ -32,10 +39,9 @@ body {
   top: -2px;
   height: 4rem;
   padding-left: 3rem;
-  overflow: visible;
 }
 .nav-logo:hover {
-  animation: bounce 2.5s infinite;
+  animation: var(--bounce-anim);
 }
 .navbar-nav {
   padding-right: 3rem;
@@ -43,6 +49,9 @@ body {
 .nav-link {
   color: var(--font-clr-primary) !important;
   font-size: 1.5em;
+  &:hover {
+    animation: var(--bounce-anim);
+  }
 }
 .active {
   color: var(--font-clr-alt) !important;
@@ -67,15 +76,23 @@ body {
 }
 
 /* hero */
-
-.container
-
-.hero-img {
-  height: 500px;
+.container-hero {
+  position: relative;
+  height: 100%;
   width: auto;
 }
 
+.hero-img {
+  position: absolute;
+  height: 500px;
+  width: auto;
+  left: 30%;
+  bottom: -100;
+  
+}
+
 .hero-text {
+  z-index: -1;
   position: absolute;
   align-items: center;
   text-align: center;
@@ -88,18 +105,18 @@ body {
   padding: 30px 37px;
   margin-top: 126px;
   transform: rotate(-5deg) translateX(-10px);
-  top: -10px;
-  left: 350px;
+  top: -110px;
+  left: 20%;
 }
 
-.hero-text h1{
+.hero-text h1 {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
-.hero-text p{
+.hero-text p {
   font-size: 2rem;
   padding-top: 1rem;
 }
-.secondary-text{
+.secondary-text {
   color: var(--font-clr-alt);
 }
