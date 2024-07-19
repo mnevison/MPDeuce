@@ -30,6 +30,9 @@ body {
   font-family: "Margarine", sans-serif;
   color: var(--font-clr-primary);
   font-weight: bold;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* header */
@@ -87,8 +90,6 @@ body {
   height: 500px;
   width: auto;
   left: 30%;
-  bottom: -100;
-  
 }
 
 .hero-text {
@@ -119,4 +120,56 @@ body {
 }
 .secondary-text {
   color: var(--font-clr-alt);
+}
+
+/* footer */
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: var(--font-clr-primary);
+  height: 100px;
+}
+
+.footer-img {
+  padding-left: 3rem;
+  padding-top: 10px;
+  height: 5rem;
+  width: auto;
+}
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5em;
+  list-style: none;
+  padding-right: 2rem;
+  & li {
+    font-size: 2rem;
+    color: var(--font-clr-primary);
+    padding-top: 10px;
+  }
+  & i{
+    padding-top: 7px;
+    
+  }
+}
+
+.li-border {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  display: block;
+  margin-left: 2rem;
+  &:hover{
+    background-color: var(--font-clr-alt);
+    transition: all 1s ease-in-out;
+  }
 }
