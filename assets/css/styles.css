@@ -133,6 +133,7 @@ body {
   }
   .hero-img {
     position: static;
+    object-fit: contain;
   }
   .hero-text {
     position: static;
@@ -155,6 +156,7 @@ footer {
   width: auto;
 }
 .container-footer {
+  container-type: inline-size;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -164,12 +166,13 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 5em;
+  height: fit-content;
   list-style: none;
   padding-right: 2rem;
   & li {
     font-size: 2rem;
     color: var(--font-clr-primary);
+    margin-top: 10px;
     padding-top: 10px;
   }
   & a {
@@ -191,5 +194,14 @@ footer {
   &:hover {
     background-color: var(--font-clr-alt);
     transition: all 0.5s ease-in-out;
+  }
+}
+
+@container (max-width: 650px) {
+  .container-footer {
+    flex-direction: column;
+  }
+  .social-links {
+    flex-direction: column;
   }
 }
