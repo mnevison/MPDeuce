@@ -80,6 +80,8 @@ body {
 
 /* hero */
 .container-hero {
+  margin-top: 5rem;
+  container-type: inline-size;
   position: relative;
   height: 100%;
   width: auto;
@@ -90,7 +92,6 @@ body {
   height: 500px;
   width: auto;
   left: 30%;
-  
 }
 
 .hero-text {
@@ -107,8 +108,8 @@ body {
   padding: 30px 37px;
   margin-top: 126px;
   transform: rotate(-5deg) translateX(-10px);
-  top: -110px;
-  left: 20%;
+  top: -160px;
+  left: 15%;
 }
 
 .hero-text h1 {
@@ -121,6 +122,21 @@ body {
 }
 .secondary-text {
   color: var(--font-clr-alt);
+}
+
+@container (max-width: 1240px) {
+  .container-hero {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .hero-img {
+    position: static;
+  }
+  .hero-text {
+    position: static;
+  }
 }
 
 /* footer */
@@ -151,14 +167,14 @@ footer {
   height: 5em;
   list-style: none;
   padding-right: 2rem;
-  text-decoration: inherit;
   & li {
     font-size: 2rem;
     color: var(--font-clr-primary);
     padding-top: 10px;
   }
   & a {
-    text-decoration: none;
+    text-decoration: inherit;
+    color: inherit;
   }
   & i {
     padding-top: 7px;
