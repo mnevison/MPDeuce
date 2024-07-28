@@ -24,13 +24,16 @@
 
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- TITLE -->
+
     <title>Bluey!</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="index.html"
             ><img src="assets/images/nav-log.png" class="nav-logo"
           /></a>
           <button
@@ -46,8 +49,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link active" href="info.html">Information</a>
+              <a class="nav-link" href="index.html">Home</a>
+              <a
+                class="nav-link active"
+                aria-current="information page"
+                href="info.html"
+                >Information</a
+              >
               <a class="nav-link" href="#">Memory Game</a>
             </div>
           </div>
@@ -55,9 +63,12 @@
       </nav>
     </header>
     <section>
+
+      <!-- page intro  -->
+
       <div class="info-intro">
         <h1 class="info-heading">Bluey Information!</h1>
-        <div class="audio theme-audio d-flex text-box">
+        <div class="audio general-audio d-flex text-box">
           <audio src="assets/audio/theme.mp3" class="myAudio"></audio>
           <button class="audio-button" aria-label="bluey theme">
             <svg
@@ -80,7 +91,102 @@
               />
             </svg>
           </button>
-          <p>Press to play the Bluey theme song!</p>
+          <p>Press to play the "Bluey" theme song!</p>
+        </div>
+      </div>
+
+      <!-- show info  -->
+
+      <div class="show-info container-fluid">
+        <p>
+          The slice-of-life adventures of an Australian Blue Heeler Cattle Dog
+          puppy as she has fun with her family and friends in everyday
+          situations.
+        </p>
+        <p class="p-2">
+          Bluey follows the adventures of a lovable and inexhaustible
+          six-year-old Blue Heeler puppy who lives with her dad, mum and
+          four-year-old little sister, Bingo. In every episode, Bluey uses her
+          limitless Blue Heeler energy to play elaborate games that unfold in
+          unpredictable and hilarious ways.
+        </p>
+      </div>
+
+      <!-- character info -->
+
+      <div class="container-fluid d-flex justify-content-center p-5 mt-5">
+        <div class="char-info text-box">
+          <h2>Now lets meet the Heeler Family!</h2>
+        </div>
+      </div>
+
+      <!-- bluey -->
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="text-box bluey-info col-xl-6 mt-3">
+            <h2>Bluey!</h2>
+            <img
+              src="assets/images/bluey-char.png"
+              class="bluey-img img-fluid"
+              alt="bluey"
+            />
+          </div>
+          <div class="bluey-info-text col-xl-6 ms-5 mt-5">
+            <ul>
+              <li>
+                Bluey is an inexhaustible blue heeler puppy, who lives with her
+                mum, dad and little sister Bingo. She likes to laugh and have
+                fun but more than anything else she loves to play games with her
+                family.
+              </li>
+              <li>
+                Bluey takes the everyday events of her family’s life and
+                transforms them into extraordinary adventures. This means role
+                play, and whether it’s a taxi driver, hotel manager or a
+                mermaid, she loves to pretend she’s a grown-up doing grown-up
+                things herself.
+              </li>
+              <li>
+                Bluey is endlessly curious too. Even when she’s nervous about
+                trying something new, like walking to the creek or going to the
+                movies, she always discovers something wonderful about the big
+                wide world around her.
+              </li>
+              <li>
+                The most important thing in Bluey’s life is her family and
+                friends and she loves to share her new games, songs and wild
+                adventures with them.
+              </li>
+            </ul>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="audio d-flex text-box bluey-quote justify-content-center my-5">
+              <audio src="assets/audio/bluey-quote.mp3" class="myAudio"></audio>
+              <button class="audio-button" aria-label="bluey quote">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="#c2e3fe"
+                  class="bi bi-volume-up"
+                  viewBox="0 0 16 16"
+                  onclick="toggleAudio('assets/audio/bluey-quote.mp3')"
+                >
+                  <path
+                    d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"
+                  />
+                  <path
+                    d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"
+                  />
+                  <path
+                    d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11"
+                  />
+                </svg>
+              </button>
+              <p class="px-5">"Just having a Nana Nap!"</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

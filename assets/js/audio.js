@@ -15,14 +15,14 @@ function toggleAudio(audioSrc) {
     isPlaying = true;
     currentAudio = audio;
     document
-      .querySelector(".audio-button-alt svg")
+      .querySelector(".audio-button svg")
       .setAttribute("class", "bi bi-volume-off");
   } else {
     audio.pause();
     isPlaying = false;
     currentAudio = null;
     document
-      .querySelector(".audio-button-alt svg")
+      .querySelector(".audio-button svg")
       .setAttribute("class", "bi bi-volume-up");
   }
 }
