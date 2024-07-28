@@ -234,16 +234,22 @@ footer {
 }
 
 /* INFORMATION.HTML STYLES */
+
+
 .info-intro {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .info-heading {
   font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 .audio-button {
+  
   border-radius: 2em;
   background-color: var(--font-clr-primary);
 }
@@ -258,4 +264,10 @@ footer {
   max-width: 485px;
   width: 100%;
   padding: 5px 17px;
+}
+
+.theme-audio p{
+  padding-left: 2rem;
+text-align: center;
+
 }
