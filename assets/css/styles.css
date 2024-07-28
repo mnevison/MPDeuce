@@ -282,7 +282,7 @@ footer {
 }
 
 .bluey-info{
-  margin-left: 2rem;
+  
   & h2{
     font-size: 3rem;
     padding-top: 1rem;   
@@ -290,7 +290,7 @@ footer {
   }  
 }
 .info-text{
-  padding-left: 4rem;
+  
   font-size: 1.5rem;
   & li{
     padding-top: 2rem;
