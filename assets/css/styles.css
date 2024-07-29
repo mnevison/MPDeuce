@@ -140,7 +140,7 @@ footer {
     justify-content: center;
     height: fit-content;
   }
- 
+
   .footer-img {
     align-self: center;
     width: 200px;
@@ -168,6 +168,9 @@ footer {
   height: 500px;
   width: auto;
   left: 30%;
+}
+.hero-img-wrapper {
+  min-width: 412px;
 }
 
 .hero-text {
@@ -232,12 +235,23 @@ footer {
 
 @container (max-width: 606px) {
   .hero-text {
-    left: 40px;
+    z-index: 2;
+    border-radius: 54px;
+    border: 11px solid #fff;
+    background: #f8f8ff;
+    box-shadow: 5px 5px 0px 0px #e0fafb;
     transform: none;
+
+    width: auto;
+    left: 0;
   }
   .hero-img {
-    width: 560px;
+    z-index: 2;
+    top: 170px;
   }
+}
+
+@container (max-width: 415px) {
 }
 
 /* INFORMATION.HTML STYLES */
