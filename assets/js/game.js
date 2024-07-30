@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "assets/images/game-images/judo.png", alt: "judo image" },
     { src: "assets/images/game-images/snickers.png", alt: "snickers image" },
     { src: "assets/images/game-images/socks.png", alt: "socks image" },
+    { src: "assets/images/game-images/mackenzie.jpg", alt: "mackenzie image"}
   ];
 
   const friendCards = document.querySelector(".friend-cards");
@@ -97,35 +98,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function unflipCard(){
+  function unflipCard() {
     cardFlipTemp = [];
 
-    const cards = document.querySelector(".card-container");
+    const cards = document.querySelectorAll(".card-container");
 
-    cards.forEach((cardContainer) =>{
-        if(!cardContainer.classList.contains("disabledcard")){
-            cardContainer.classList = ["card-container"];
-        }
+    cards.forEach((cardContainer) => {
+      if (!cardContainer.classList.contains("disabledcard")) {
+        cardContainer.classList = ["card-container"];
+      }
     });
   }
 
-  function markAsMatched(id){
+  function markAsMatched(id) {
     const cards = document.querySelectorAll(".card-container");
-    
-    cards.forEach((cardContainer)=>{
-        if (cardContainer.id === id){
-            cardContainer.classList = ["card-container disabledcard click"];
-        }
+
+    cards.forEach((cardContainer) => {
+      if (cardContainer.id === id) {
+        cardContainer.classList = ["card-container disabledcard click"];
+      }
     });
   }
   function startGame() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
       const card = createFriendCard();
       const cardWithFriend = imageToCard(card);
 
-      card.addEventListener('click', function() {
+      card.addEventListener("click", function () {
         checkMatchedCard(card);
-        card.classList.add('click');
       });
 
       friendCards.appendChild(cardWithFriend);

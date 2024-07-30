@@ -317,7 +317,38 @@ footer {
 
 /* GAME.HTML STYLES */
 
-/* .card-container
-.face-card
+.game-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.friend-cards{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-container{
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+
+}
+
+.face-card{
+  height: 150px;
+  width: 150px;
+}
+
+
+
+/* .face-card
 .show-card
 .front-card */
