@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const friendCards = document.querySelector(".friend-cards");
+  const resetButton = document.getElementById("reset-button")
 
   let cardFlipTemp = [];
 
@@ -85,6 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
         setTimeout(() => {
           markAsMatched(firstCard, secondCard);
+          if(checkGameCompletion()){
+            alert("Congratulations! You've found all of Bluey's friends!");
+          }
         }, 1000);
       } else {
         setTimeout(() => {
@@ -106,7 +110,16 @@ document.addEventListener("DOMContentLoaded", function () {
     cardFlipTemp = [];
   }
 
+  function checkGameCompletion(){
+    return document.querySelectorAll(".card container.disablecard").length===12;
+  }
+
   function startGame() {
+    cardCount = {};
+    cardFlipTemp = [];
+
+    friendCards.innerHTML = "";
+
     for (let i = 0; i < 12; i++) {
       const card = createFriendCard();
       const cardWithFriend = imageToCard(card);
@@ -118,6 +131,12 @@ document.addEventListener("DOMContentLoaded", function () {
       friendCards.appendChild(cardWithFriend);
     }
   }
+  function resetGame(){
+
+  startGame();
+  }
+
+  resetButton.addEventListener("click", resetGame);
 
   startGame();
 });
