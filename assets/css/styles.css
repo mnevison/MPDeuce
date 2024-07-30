@@ -25,8 +25,8 @@
 
 body {
   background-color: var(--background-color);
-  background-image: url(assets/images/clouds-background.png);
-  background-size: cover;
+  background-image: url("../images/clouds-background.png");
+  background-size: repeat;
   font-family: "Margarine", sans-serif;
   color: var(--font-clr-primary);
   font-weight: bold;
@@ -251,8 +251,6 @@ footer {
   }
 }
 
-@container (max-width: 415px) {
-}
 
 /* INFORMATION.HTML STYLES */
 
@@ -316,6 +314,8 @@ footer {
 }
 
 /* GAME.HTML STYLES */
+
+
 .game-heading {
   margin-bottom: 2rem;
 }
