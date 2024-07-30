@@ -118,4 +118,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
   }
+  function startGame() {
+    for (let i = 0; i < 10; i++) {
+      const card = createFriendCard();
+      const cardWithFriend = imageToCard(card);
+
+      card.addEventListener('click', function() {
+        checkMatchedCard(card);
+        card.classList.add('click');
+      });
+
+      friendCards.appendChild(cardWithFriend);
+    }
+  }
+
+  startGame();
 });
