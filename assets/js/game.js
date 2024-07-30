@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "assets/images/game-images/judo.png", alt: "judo image" },
     { src: "assets/images/game-images/snickers.png", alt: "snickers image" },
     { src: "assets/images/game-images/socks.png", alt: "socks image" },
-    { src: "assets/images/game-images/mackenzie.jpg", alt: "mackenzie image"}
+    { src: "assets/images/game-images/mackenzie.jpg", alt: "mackenzie image" }
   ];
 
   const friendCards = document.querySelector(".friend-cards");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } while (cardCount[cardIndex] >= 2);
     cardCount[cardIndex] = (cardCount[cardIndex] || 0) + 1;
 
-    cardContainer.setAttribute("id", cardIndex);
+    cardContainer.setAttribute("data-id", cardIndex);
 
     const img = document.createElement("img");
     img.src = friends[cardIndex].src;
@@ -69,56 +69,43 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    cardContainer.classList.add("click");
+
     if (cardFlipTemp.length >= 2) {
       setTimeout(() => {
-        processFippeedCards();
+        processFlippedCards();
       }, 1000);
       return;
     }
 
-    if (cardFlipTemp.length === 0) {
-      cardFlipTemp.push(cardContainer.id);
-      return;
-    }
+    cardFlipTemp.push(cardContainer);
 
-    if (cardFlipTemp.length > 0 && cardFlipTemp[0] !== cardContainer.id) {
-      cardFlipTemp = [];
-
-      setTimeout(() => {
-        unflipCard();
-      }, 500);
-      return;
-    }
-    if (cardFlipTemp.length > 0 && cardFlipTemp.includes(cardContainer.id)) {
-      cardFlipTemp = [];
-      setTimeout(() => {
-        markAsMatched(cardContainer.id);
-      }, 1000);
-      return;
+    if (cardFlipTemp.length === 2) {
+      const [firstCard, secondCard] = cardFlipTemp;
+      if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
+        setTimeout(() => {
+          markAsMatched(firstCard, secondCard);
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          unflipCards(firstCard, secondCard);
+        }, 1000);
+      }
     }
   }
 
-  function unflipCard() {
+  function unflipCards(firstCard, secondCard) {
+    firstCard.classList.remove("click");
+    secondCard.classList.remove("click");
     cardFlipTemp = [];
-
-    const cards = document.querySelectorAll(".card-container");
-
-    cards.forEach((cardContainer) => {
-      if (!cardContainer.classList.contains("disabledcard")) {
-        cardContainer.classList = ["card-container"];
-      }
-    });
   }
 
-  function markAsMatched(id) {
-    const cards = document.querySelectorAll(".card-container");
-
-    cards.forEach((cardContainer) => {
-      if (cardContainer.id === id) {
-        cardContainer.classList = ["card-container disabledcard click"];
-      }
-    });
+  function markAsMatched(firstCard, secondCard) {
+    firstCard.classList.add("disabledcard");
+    secondCard.classList.add("disabledcard");
+    cardFlipTemp = [];
   }
+
   function startGame() {
     for (let i = 0; i < 12; i++) {
       const card = createFriendCard();
