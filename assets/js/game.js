@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const friendCards = document.querySelector(".friend-cards");
-  const resetButton = document.getElementById("reset-button")
+  const resetButton = document.getElementById("reset-button");
 
   let cardFlipTemp = [];
+  let cardCount = {};
 
   function createFriendCard() {
     const cardContainer = document.createElement("div");
@@ -39,13 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return cardContainer;
   }
 
-  let cardCount = {};
-
-  function imageToCard(cardContainer) {
+  function imageToCard(cardContainer) { 
     const frontCard = cardContainer.querySelector(".front-card");
 
     let cardIndex;
-
     do {
       cardIndex = Math.floor(Math.random() * friends.length);
     } while (cardCount[cardIndex] >= 2);
@@ -86,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
         setTimeout(() => {
           markAsMatched(firstCard, secondCard);
-          if(checkGameCompletion()){
-            alert("Congratulations! You've found all of Bluey's friends!");
+          if (checkGameCompletion()) {
+            alert("Congratulations! You've found all Bluey's friends!.");
           }
         }, 1000);
       } else {
@@ -95,6 +93,18 @@ document.addEventListener("DOMContentLoaded", function () {
           unflipCards(firstCard, secondCard);
         }, 1000);
       }
+    }
+  }
+
+  function processFlippedCards() {
+    const [firstCard, secondCard] = cardFlipTemp;
+    if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
+      markAsMatched(firstCard, secondCard);
+      if (checkGameCompletion()) {
+        alert("Congratulations! You've found all Bluey's friends!.");
+      }
+    } else {
+      unflipCards(firstCard, secondCard);
     }
   }
 
@@ -110,15 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
     cardFlipTemp = [];
   }
 
-  function checkGameCompletion(){
-    return document.querySelectorAll(".card container.disablecard").length===12;
+  function checkGameCompletion() {
+    const matchedCards = document.querySelectorAll(".card-container.disabledcard");
+    return matchedCards.length === 12;
   }
 
   function startGame() {
     cardCount = {};
-    cardFlipTemp = [];
+    cardFlipTemp = []; 
 
-    friendCards.innerHTML = "";
+    friendCards.innerHTML = ""; 
 
     for (let i = 0; i < 12; i++) {
       const card = createFriendCard();
@@ -131,12 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
       friendCards.appendChild(cardWithFriend);
     }
   }
-  function resetGame(){
 
-  startGame();
+  function resetGame() {
+    startGame();
   }
 
   resetButton.addEventListener("click", resetGame);
 
-  startGame();
+    startGame();
 });

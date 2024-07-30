@@ -316,6 +316,13 @@ footer {
 }
 
 /* GAME.HTML STYLES */
+.game-heading{
+  margin-bottom: 2rem;
+}
+
+#reset-button{
+  margin-top: 2rem;
+}
 
 .game-wrapper {
   display: flex;
