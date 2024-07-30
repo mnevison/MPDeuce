@@ -34,7 +34,32 @@ document.addEventListener("DOMContentLoaded", function () {
     cardHidden.alt = "question mark box"
     showCard.appendChild(cardHidden)
 
-    return cardContainer
+    return cardContainer;
 
   }
+
+  let cardCount = {};
+
+  function imageToCard(cardContainer){
+    const frontCard = cardContainer.querySelector(".front-card");
+
+
+    let cardIndex;
+
+    do{
+        cardIndex = Math.floor(Math.random() * friends.length);
+    }while(cardCount[cardIndex] >= 2);
+    cardCount[cardIndex] = (cardCount[cardIndex] || 0) + 1;
+
+    cardContainer.setAttribute("id", cardIndex);
+
+    const img = document.createElement("img");
+    img.src = friends[cardIndex].src;
+    img.alt = friends[cardIndex].alt;
+
+    frontCard.append(img);
+
+  }
+
+
 });
