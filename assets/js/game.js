@@ -31,24 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardHidden = document.createElement("img");
     cardHidden.src = "assets/images/game-images/question-mark.jpeg";
-    cardHidden.alt = "question mark box"
-    showCard.appendChild(cardHidden)
+    cardHidden.alt = "question mark box";
+    showCard.appendChild(cardHidden);
 
     return cardContainer;
-
   }
 
   let cardCount = {};
 
-  function imageToCard(cardContainer){
+  function imageToCard(cardContainer) {
     const frontCard = cardContainer.querySelector(".front-card");
-
 
     let cardIndex;
 
-    do{
-        cardIndex = Math.floor(Math.random() * friends.length);
-    }while(cardCount[cardIndex] >= 2);
+    do {
+      cardIndex = Math.floor(Math.random() * friends.length);
+    } while (cardCount[cardIndex] >= 2);
     cardCount[cardIndex] = (cardCount[cardIndex] || 0) + 1;
 
     cardContainer.setAttribute("id", cardIndex);
@@ -59,7 +57,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
     frontCard.append(img);
 
+    return cardContainer;
   }
 
+  function checkMatchedCard(cardContainer) {
+    if (
+      cardContainer.classList.contains("disabledcard") ||
+      cardContainer.classList.contains("click")
+    ) {
+      return;
+    }
 
+    if (cardFlipTemp.length >= 2) {
+      setTimeout(() => {
+        processFippeedCards();
+      }, 1000);
+      return;
+    }
+
+    if (cardFlipTemp.length === 0) {
+      cardFlipTemp.push(cardContainer.id);
+      return;
+    }
+
+    if (cardFlipTemp.length > 0 && cardFlipTemp[0] !== cardContainer.id) {
+      cardFlipTemp = [];
+
+      setTimeout(() => {
+        unflipCard();
+      }, 500);
+      return;
+    }
+    if (cardFlipTemp.length > 0 && cardFlipTemp.includes(cardContainer.id)) {
+      cardFlipTemp = [];
+      setTimeout(() => {
+        markAsMatched(cardContainer.id);
+      }, 1000);
+      return;
+    }
+  }
+
+  function unflipCard(){
+    cardFlipTemp = [];
+
+    const cards = document.querySelector(".card-container");
+
+    cards.forEach((cardContainer) =>{
+        if(!cardContainer.classList.contains("disabledcard")){
+            cardContainer.classList = ["card-container"];
+        }
+    });
+  }
+
+  function markAsMatched(id){
+    const cards = document.querySelectorAll(".card-container");
+    
+    cards.forEach((cardContainer)=>{
+        if (cardContainer.id === id){
+            cardContainer.classList = ["card-container disabledcard click"];
+        }
+    });
+  }
 });
