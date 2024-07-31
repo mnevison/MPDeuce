@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkMatchedCard(cardContainer) {
     if (
-      cardContainer.classList.contains("disabledcard") ||
+      cardContainer.classList.contains("disable") ||
       cardContainer.classList.contains("click")
     ) {
       return;
@@ -115,13 +115,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function markAsMatched(firstCard, secondCard) {
-    firstCard.classList.add("disabledcard");
-    secondCard.classList.add("disabledcard");
+    firstCard.classList.add("disable");
+    secondCard.classList.add("disable");
     cardFlipTemp = [];
   }
 
   function checkGameCompletion() {
-    const matchedCards = document.querySelectorAll(".card-container.disabledcard");
+    const matchedCards = document.querySelectorAll(".card-container.disable");
     return matchedCards.length === 12;
   }
 
