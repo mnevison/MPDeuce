@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "assets/images/game-images/judo.png", alt: "judo image" },
     { src: "assets/images/game-images/snickers.png", alt: "snickers image" },
     { src: "assets/images/game-images/socks.png", alt: "socks image" },
-    { src: "assets/images/game-images/mackenzie.jpg", alt: "mackenzie image" }
+    { src: "assets/images/game-images/mackenzie.jpg", alt: "mackenzie image" },
   ];
 
   const friendCards = document.querySelector(".friend-cards");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return cardContainer;
   }
 
-  function imageToCard(cardContainer) { 
+  function imageToCard(cardContainer) {
     const frontCard = cardContainer.querySelector(".front-card");
 
     let cardIndex;
@@ -83,14 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cardFlipTemp.length === 2) {
       const [firstCard, secondCard] = cardFlipTemp;
-      if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
+      if (
+        firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")
+      ) {
         setTimeout(() => {
           markAsMatched(firstCard, secondCard);
           if (checkGameCompletion()) {
             Swal.fire({
               title: "Good job!",
               text: "You found all of Bluey's friends!",
-              icon: "success"
+              icon: "success",
             });
           }
         }, 1000);
@@ -103,14 +105,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function processFlippedCards() {
+    if (cardFlipTemp.length < 2) {
+      return;
+    }
+
     const [firstCard, secondCard] = cardFlipTemp;
-    if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
+    if (
+      firstCard &&
+      secondCard &&
+      firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")
+    ) {
       markAsMatched(firstCard, secondCard);
       if (checkGameCompletion()) {
         Swal.fire({
           title: "Good job!",
           text: "You found all of Bluey's friends!",
-          icon: "success"
+          icon: "success",
         });
       }
     } else {
@@ -137,9 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function startGame() {
     cardCount = {};
-    cardFlipTemp = []; 
+    cardFlipTemp = [];
 
-    friendCards.innerHTML = ""; 
+    friendCards.innerHTML = "";
 
     for (let i = 0; i < 12; i++) {
       const card = createFriendCard();
@@ -159,5 +169,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   resetButton.addEventListener("click", resetGame);
 
-    startGame();
+  startGame();
 });
