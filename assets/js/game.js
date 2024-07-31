@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener("DOMContentLoaded", function () {
   const friends = [
     { src: "assets/images/game-images/dusty.png", alt: "dusty image" },
