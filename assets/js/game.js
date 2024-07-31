@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
       } else {
         setTimeout(() => {
-          unflipCards(firstCard, secondCard);
+          turnCards(firstCard, secondCard);
         }, 1000);
       }
     }
@@ -112,11 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     } else {
-      unflipCards(firstCard, secondCard);
+      turnCards(firstCard, secondCard);
     }
   }
 
-  function unflipCards(firstCard, secondCard) {
+  function turnCards(firstCard, secondCard) {
     firstCard.classList.remove("click");
     secondCard.classList.remove("click");
     cardFlipTemp = [];
