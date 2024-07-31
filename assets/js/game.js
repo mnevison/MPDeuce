@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           markAsMatched(firstCard, secondCard);
           if (checkGameCompletion()) {
-            alert("Congratulations! You've found all Bluey's friends!.");
+            Swal.fire({
+              title: "Good job!",
+              text: "You found all of Bluey's friends!",
+              icon: "success"
+            });
           }
         }, 1000);
       } else {
@@ -101,7 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (firstCard.getAttribute("data-id") === secondCard.getAttribute("data-id")) {
       markAsMatched(firstCard, secondCard);
       if (checkGameCompletion()) {
-        alert("Congratulations! You've found all Bluey's friends!.");
+        Swal.fire({
+          title: "Good job!",
+          text: "You found all of Bluey's friends!",
+          icon: "success"
+        });
       }
     } else {
       unflipCards(firstCard, secondCard);
