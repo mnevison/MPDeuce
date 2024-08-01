@@ -33,7 +33,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
 }
 
 /* header */
@@ -292,7 +291,6 @@ footer {
   }
 }
 
-
 /* INFORMATION.HTML STYLES */
 
 .info-intro {
@@ -356,7 +354,6 @@ footer {
 
 /* GAME.HTML STYLES */
 
-
 .game-heading {
   margin-bottom: 2rem;
 }
@@ -381,6 +378,7 @@ footer {
   padding: 20px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .friend-cards {
@@ -449,14 +447,34 @@ footer {
     width: 125px;
     height: 125px;
   }
+}
 
-  #reset-button{
-    margin-bottom: 1rem;
+#reset-button {
+  margin-bottom: 1rem;
+  color: var(--font-clr-primary);
+  font-weight: bold;
+  &:hover {
+    animation: var(--bounce-anim);
   }
+}
+
+.swal2-title{
+  color: var(--font-clr-primary);
+}
+
+#swal2-html-container{
+  color: var(--font-clr-primary);
+}
+
+.swal2-confirm,
+.swal2-styled {
+  background-color: var(--background-color);
+  color: var(--font-clr-primary);
+  font-weight: bold;
 }
 
 /* 404.html */
 
-.lost-title{
+.lost-title {
   font-size: 1.5rem;
 }
