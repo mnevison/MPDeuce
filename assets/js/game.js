@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cardHidden = document.createElement("img");
     cardHidden.src = "assets/images/game-images/question-mark.jpeg";
     cardHidden.alt = "question mark box";
+    cardHidden.tabIndex = 0;
     showCard.appendChild(cardHidden);
 
     return cardContainer;
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const img = document.createElement("img");
     img.src = friends[cardIndex].src;
     img.alt = friends[cardIndex].alt;
+    img.tabIndex = 0;
 
     frontCard.append(img);
 

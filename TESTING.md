@@ -168,3 +168,13 @@ The Header & Footer of the site are present on each page. The header will typica
 **Mobile Nav**
 
 ![mobile-nav](docs/testing/mobile-nav.gif)
+
+### Home Page/Index
+
+The main feature of the home page would just be the general content. Ensuring that the content and especially the hero/profile image were responsive across all view ports was my main concern with this page.
+
+**Testing**
+
+| Feature            | Expectation                                      | Test Performed                          | Outcome                                                              |
+| ------------------ | ------------------------------------------------ | --------------------------------------- | -------------------------------------------------------------------- |
+| Responsive Content | Content resizes/rearranges based on users device | Tested across a range of devices/medias | Content changed size and remained legible across said devices/medias |
