@@ -20,13 +20,6 @@ I have young children.. So when I mentioned the possibility of making a memory g
   - [Wireframes](#wireframes)
   - [Features](#features)
 
-    - [Homepage](#home-page)
-    - [Experience](#experience)
-    - [Projects](#projects)
-    - [Contact](#contact)
-    - [Form Submit](#form-submit)
-    - [404](#404)
-    - [Site Wide](#site-wide)
     - [Future Updates/Changes](#future-improvementschanges)
 
   - [Accessability](#accessibility)
@@ -133,5 +126,120 @@ I have young children.. So when I mentioned the possibility of making a memory g
   - The footer is present on each page which contains a nav link back to the home page, and also access to popular social media links related to Bluey.
   - I've added an audio element to the information page, where you can listen to the Bluey theme until your hearts content!
   - And it wouldn't be a good game website without.. a game! Again, you can play this until your hearts content.
+  - Custom 404 page to handle any navigation issues. 
+
+  ### Future Updates/Changes
+
+  I am overall pretty happy with the site in its current form. 
+
+  - I would have liked to add character sounds for the game. When you pair a character and get a match, it would have been nice to get a voice snippet. I would have also liked to add a game completion audio que.
+
+  ### Accessibility 
+
+  While building the website I have been mindful of accessability and have tried to make as much of the site as accessible as possible. I've done this by:
+
+- Using semantic HTML elements.
+- Adding hover effects to all interactive links and also making them keyboard-focusable.
+- Using a primary font that was designed with accessability in mind, and also having a sans-serif font as a back-up.
+- Choosing colours that have a good contrast across the site.
+- All links are keyboard focusable.
+- Alt tags added to all images, even the ones used within the game. 
+
+---
+
+## How It was Built
+
+### Languages Used
+
+As per the requirements of the project, the languages used across the site are HTML, CSS & JavaScript. 
+
+### Libraries, Websites & Programs Used
+
+- [VSCode](https://code.visualstudio.com/) - IDE of choice for the site.
+- [Git](https://git-scm.com/) - For version control.
+- [GitHub](https://github.com/) - To store all files relating to the project.
+- [Balsamiq](https://balsamiq.com/) - For the wireframes used to mock-up the site.
+- [Favicon.io](https://favicon.io/) - Used for the sites favicon.
+- [Bing Designer](https://www.bing.com/search?q=Bing+AI&showconv=1&sendquery=1&FORM=HDRSC2) - Used to create my AI profile picture.
+- [Google Fonts](https://fonts.google.com/) - For the font used across the site.
+- [Font Awesome](https://fontawesome.com/) - For the brand icons.
+- [Google Dev Tools](https://developer.chrome.com/docs/) - Dev tools used throughout the build process.
+- [Am I Responsive](https://ui.dev/amiresponsive) - Used for the Multi Screen display images in the documentation.
+- [Sweetalert2](https://sweetalert2.github.io/#download) - JS Library used for custom pop-ups (Used on game completion).
+- [Bluey! Official](https://bluey.tv) - Wealth of information on the subject of the website. Used for inspiration, imagery, audio etc. 
+- [Boostrap 5.3](https://getbootstrap.com/) - Used various assets/custom classes across the site to aid with development speed and responsiveness.
+
+---
+
+## Deployment & Local Development
+
+### Deployment
+
+This site is deployed via GitHub Pages: [Bluey!](https://mnevison.github.io/MPDeuce/index.html)
+
+1. Login to Github (Or sign up).
+2. Go to the repository for this project, <https://github.com/mnevison/milestone-p1>
+3. Click on the settings button.
+4. Select "pages" in the navigation on the left side.
+5. From the source drop down, select the "main" branch and save.
+6. The site is now deployed! This process may take a few minutes, but you will see a "deployments" section on the lower right with your live link.
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, <https://github.com/mnevison/MPDeuce>
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, <https://github.com/mnevison/MPDeuce>
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+---
+
+## Testing
+
+Please see [TESTING.md](TESTING.md) for all testing that has been carried out.
+
+### Solved Bugs
+
+- The main "bug" I experienced was with my game allowing a user to brute force cards and flip over more than intended. This was solved by adding additional functionality to the click events handling and timeouts.
+
+![game-error](docs/images/game-error.png)
+
+ - I was getting an error in the console when running the game - 
+  "TypeError: Cannot read properties of undefined (reading 'getAttribute')
+    at processFlippedCards (game.js:107:19)
+    at game.js:77:9"
+    - This was resolved by adding some defensive checks, making sure there were exactly 2 cards stored and that they were both defined correctly. 
+
+## Credits
+
+### Code Used
+
+- Found a Youtube Tutorial on memory games that I used as a guide for the structure of the game. [https://www.youtube.com/watch?v=t3cydTwfEnM]
+
+- The audio.js was re-used from a project I did for my daughter. [https://github.com/mnevison/arya-cats-project]
+
+### Page Content
+
+- As mentioned at various parts throughout the documentation, the Official Bluey website was used throughout the build process for various resources and inspirations. 
+
+### Acknowledgements 
+
+I would like to give special acknowledgements to:
+
+- UCP-15 Discord - For always providing feedback on my project.
+- Jubril Akolade - My Code Institute mentor.
+- Cameron Rafferty - For being a great sounding board and just generally a top bro. 
 
 

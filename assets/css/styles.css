@@ -434,7 +434,7 @@ footer {
   transform: rotateY(180deg);
 }
 
-.disabledcard {
+.disable {
   pointer-events: none;
   opacity: 0.6;
 }
