@@ -38,6 +38,7 @@ I have young children.. So when I mentioned the possibility of making a memory g
 
   - [Solved Bugs](#solved-bugs)
   - [Known Bugs](#known-bugs)
+  - [Issues](#issues)
 
 - [Credits](#credits)
 
@@ -222,6 +223,16 @@ Please see [TESTING.md](TESTING.md) for all testing that has been carried out.
     at processFlippedCards (game.js:107:19)
     at game.js:77:9"
     - This was resolved by adding some defensive checks, making sure there were exactly 2 cards stored and that they were both defined correctly. 
+
+### Known Bugs
+
+- At time of writing there are no known bugs on the site. 
+
+### Issues
+
+- I ran into a few issues during the development process. One of which was related to Bootstrap not enjoying being restyled. I fought hard with the navbar component that they provide to still function as it should, but also look and feel the way I wanted it to.
+- Burn out - This was more of a personal issue. Since starting the course in Feb, I've just focused on doing the course, learning as much as I can about development and programming and put the distractions/hobbies on hold. With working full time, having 2 young children that like to be active and have various after school activities they attend almost daily, it became a lot. I was a reasonable amount in front of where I needed to be when it came to the learning material vs submission dates, however, I fell into a funk and needed some **me** time, which lost me my gained time, to the point where my original project idea was going to take way too long!
+    - Moving forward I'm going to try and take a bit of time for myself, as I don't think the next 2 projects would allow for such a short development time.
 
 ## Credits
 
