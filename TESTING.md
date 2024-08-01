@@ -51,3 +51,35 @@ Visit the deployed site: [Bluey!](https://mnevison.github.io/MPDeuce/index.html)
 
 [JSHint](https://jshint.com/) has been used to validate my JavaScript. 
 
+[JSHint - Audio](docs/testing/jshint%20-%20audio.png) - Passed with No errors
+
+[JSHint - Game](docs/testing/jshint%20-%20game.png) - The error shown is related to scoping has been left as is. I feel that trying to correct this error would over-all lead the code actually being more semantically confusing. 
+
+- Unused variable is related to "Sweetalerts2" - The pop-up works as intended. 
+
+### Lighthouse 
+
+I ran each page of my site through Lighthouse on Google Dev Tools to test the various performance metrics it measures. Overall I'm happy with the majority of the scores - Performance seems to take a hit on mobile, and specifically desktop & mobile on the game page. I believe changing my images to a webp format might increase these performance metrics, however - Based on the below information I am still happy with where it's landed in its current form. 
+
+_Lighthouse results range from 0-100. Ranges 0-49 are seen as "poor" 50-89 are considered good, and anything over 90 would be excellent. The changes I made to increase my scores regarding accessibility were done within my "footer" - my links were aria-hidden: true which causes issues for screen readers. I improved my SEO score by added more descriptive meta data within the head section of each page - basic description of the site and details of the author._
+
+#### Home Results
+
+![home-desktop](docs/testing/lighthouse-home-desktop.png)
+![home-mobile](docs/testing/lighthouse-home-mobie.png)
+
+#### Information Results
+
+![info-desktop](docs/testing/lighthouse-info-desktop.png)
+![info-mobile](docs/testing/lighthouse-info-mobile.png)
+
+#### Game Results
+
+![game-desktop](docs/testing/lighthouse-game-desktop.png)
+![game-mobile](docs/testing/lighthouse-game-mobile.png)
+
+---
+
+## Manual Testing
+
+### Testing User Stories
