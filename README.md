@@ -1,6 +1,6 @@
 # Bluey! Interactive Front End Design/Development - Milestone Project 2.
 
-![AmIResponsive Image](docs\images\amiresponsive-main.png)
+![AmIResponsive Image](docs/images/amiresponsive-main.png)
 
 Visit the deployed site: [Bluey!](https://mnevison.github.io/MPDeuce/index.html)
 
@@ -85,6 +85,6 @@ I have young children.. So when I mentioned the possibility of making a memory g
 
   Here are the hex values I used:
 
-  ![colour-scheme](docs\images\colour-scheme.png)
+  ![colour-scheme](docs/images/colour-scheme.png)
 
   These were added across the site as custom CSS variables, so if I ever wanted to change the colours it would be a case of changing 3 things rather than going through the whole site where colour is applied.  
