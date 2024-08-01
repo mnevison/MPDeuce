@@ -53,9 +53,9 @@ I have young children.. So when I mentioned the possibility of making a memory g
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
 
-  ---
+***
 
-  ## User Experience (UX)
+## User Experience (UX)
 
   ### User Stories
 
@@ -75,8 +75,8 @@ I have young children.. So when I mentioned the possibility of making a memory g
   - I LOVE Bluey and I can't get enough!
   - Playing the memory game - Simple design with a nice pop-up that gives that gratification upon completion.
 
-  ---
-  
+  ***
+
   ## Design
 
   ### Colour Scheme
@@ -87,4 +87,51 @@ I have young children.. So when I mentioned the possibility of making a memory g
 
   ![colour-scheme](docs/images/colour-scheme.png)
 
-  These were added across the site as custom CSS variables, so if I ever wanted to change the colours it would be a case of changing 3 things rather than going through the whole site where colour is applied.  
+  These were added across the site as custom CSS variables, so if I ever wanted to change the colours it would be a case of changing 3 things rather than going through the whole site where colour is applied.
+
+  ### Typography
+
+  I was able to find my found of choice on Google Fonts.
+
+  I would have loved to use the "Bluey" font (Hello Headline) however I was unable to find a free version of it! Failing that, I wanted something with a "cartoony" vibe, but something that was also very readable. I settled on "Margarine" as the final font for the site.
+
+   - **Script Typeface**: Margarine is classified as a script typeface, meaning it mimics cursive handwriting or calligraphy.
+   - **Retro Feel**: It has a vintage, mid-20th-century aesthetic with a friendly, casual vibe.
+   - **Thick Strokes**: The letters are bold with thick strokes, making it highly legible and impactful.
+   - **Rounded Edges**: The edges of the characters are rounded, adding to its approachable and warm appearance.
+
+  ![font](docs/images/font-preview.png)
+
+  ### Imagery 
+
+  All the images I used on the website I was able to get from [Bluey.tv](https://www.bluey.tv/). Being the "official" Bluey website, they had a wealth of resources on the show and character. 
+
+ - I wanted a nice hero Image for the site and was able to get a nice one of the Heeler family going on a trip!
+
+ - For the game I wanted to use something other than the main cast - So I decided to go with Bluey's friends. 
+
+ - I generated the image to hide the friend cards using AI ([Bing](https://www.bing.com/images/create)).
+ 
+ - Fontawesome was used in the footer for brand logos.
+
+  ### Wireframes
+  
+  Wireframes were created for various devices using Balsamiq
+
+  ![index-desktop](docs/images/index-wireframe-desktop.png) ![index-mobile](docs/images/index-wireframe-mobile.png)
+  ![info-desktop](docs/images/info-wireframe-desktop.png) ![info-mobile](docs/images/info-wireframe-mobile.png)
+  ![game-desktop](docs/images/game-wireframe-desktop.png) ![game-mobile](docs/images/game-wireframe-mobile.png)
+
+  ### Features 
+
+  The website is set across 3 pages, made up of the home page, an information page and the game page. 
+
+  Each page is responsive across a range of popular devices.
+
+  - Each page has an "on theme" Favicon.
+  - Navigation is present across the site.
+  - The footer is present on each page which contains a nav link back to the home page, and also access to popular social media links related to Bluey.
+  - I've added an audio element to the information page, where you can listen to the Bluey theme until your hearts content!
+  - And it wouldn't be a good game website without.. a game! Again, you can play this until your hearts content.
+
+
