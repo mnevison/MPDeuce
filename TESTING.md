@@ -148,17 +148,23 @@ The Header & Footer of the site are present on each page. The header will typica
 | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------- |
 | Click the Bluey Logo                         | Navigate back to home                                                                               | Clicked link                        | Refreshed/Changed page                                                      |
 | Nav Links                              | Take user to required page                                                                          | Clicked link                        | Went to intended page                                                       |
-| Hover effect                           | Alter colour/Apply "Bounce" effect                                                 | Hovered over                        | Colour changed/Bounced 
-![bounce-logo](docs/testing/logo-bounce.gif) ![hover-links](docs/testing/hover-links.gif)|
-
-
-
-
-| Header always on top on mobile devices | Header element and contents (title and navigation) remain on top of content                         | Screen resized & scrolled down page | Header was on top of contact and all interactions still present and working ![mobile-nav](docs/testing/mobile-nav.gif) |
-
-| Active Page                           | The page the user is on is to be highlighted in a different colour to the standard navigation links | Changed to each page                | Correct page was highlighted when viewing ![active-change](docs/testing/active-change.gif)|
-
+| Hover effect                           | Alter colour/Apply "Bounce" effect                                                 | Hovered over                        | Colour changed/Bounced                                                              |
+| Header always on top on mobile devices | Header element and contents (title and navigation) remain on top of content                         | Screen resized & scrolled down page | Header was on top of contact and all interactions still present and working |
+| Active Page                           | The page the user is on is to be highlighted in a different colour to the standard navigation links | Changed to each page                | Correct page was highlighted when viewing                                   |
 | Footer Links                           | A new tab would open when link is pressed and user would be taken to desired page                   | Clicked links                       | New tab opened for each link provided                                       |
 
 
+**Hover & Bounce**
 
+![bounce-logo](docs/testing/logo-bounce.gif)
+
+![hover-links](docs/testing/hover-links.gif)
+
+
+**Active Nav Change**
+
+![active-change](docs/testing/active-change.gif)
+
+**Mobile Nav**
+
+![mobile-nav](docs/testing/mobile-nav.gif)
