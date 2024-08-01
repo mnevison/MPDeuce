@@ -107,3 +107,57 @@ _Lighthouse results range from 0-100. Ranges 0-49 are seen as "poor" 50-89 are c
 | I want to play the GAME! | The game can be accessed via the navigation on any device, has a reset button for when you get that initial dopamine hit, you can just keep going! |
 
 --- 
+
+## Full Site & Feature Testing
+
+### Devices
+
+The site was built using VSCode on a desktop Windows based PC. When testing the site features and responsiveness I tried to use a range of devices I had at my disposal, as well as asking friends and peers to check the site.
+
+Devices I used to check personally are:
+
+- Primary Display
+
+  - AOC 24" 1080p Monitor
+
+- Laptop
+
+  - Lenovo Thinkpad 14inch
+
+- Mobile
+  - Google Pixel 7
+  - Google Pixel 7a
+  - Google Pixel 6
+  - Samsung s20
+
+I tested the site using Google Chrome, Microsoft Edge and Firefox on the Desktop & Laptop. Mobile devices are running Chrome, and I was able to use the Samsung Browser on the s20.
+
+_Unfortunately I don't have access to any Apple products, so I was unable to test the site on these devices myself - However, a class mate was able to test Safari for me and reported no issues._
+
+---
+
+## Features
+
+### Header & Footer
+
+The Header & Footer of the site are present on each page. The header will typically always be in view, as it is the users primary way to navigate around the site. When the site is viewed on a mobile device the navigation will reduce in size and have a drop-down menu. The footer will also re-size and re-shape accordingly. 
+
+**Testing**
+
+| Feature                                | Expectation                                                                                         | Test Performed                      | Outcome                                                                     |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------- |
+| Click the Bluey Logo                         | Navigate back to home                                                                               | Clicked link                        | Refreshed/Changed page                                                      |
+| Nav Links                              | Take user to required page                                                                          | Clicked link                        | Went to intended page                                                       |
+| Hover effect                           | Alter colour/Apply "Bounce" effect                                                 | Hovered over                        | Colour changed/Bounced |
+
+![bounce-logo](docs/testing/logo-bounce.gif)
+![hover-links](docs/testing/hover-links.gif)
+
+| Header always on top on mobile devices | Header element and contents (title and navigation) remain on top of content                         | Screen resized & scrolled down page | Header was on top of contact and all interactions still present and working |
+![mobile-nav](docs/testing/mobile-nav.gif)
+| Active Page                           | The page the user is on is to be highlighted in a different colour to the standard navigation links | Changed to each page                | Correct page was highlighted when viewing                                   |
+![active-change](docs/testing/active-change.gif)
+| Footer Links                           | A new tab would open when link is pressed and user would be taken to desired page                   | Clicked links                       | New tab opened for each link provided                                       |
+
+
+
