@@ -178,7 +178,7 @@ As per the requirements of the project, the languages used across the site are H
 This site is deployed via GitHub Pages: [Bluey!](https://mnevison.github.io/MPDeuce/index.html)
 
 1. Login to Github (Or sign up).
-2. Go to the repository for this project, <https://github.com/mnevison/milestone-p1>
+2. Go to the repository for this project, <https://github.com/mnevison/MPDeuce>
 3. Click on the settings button.
 4. Select "pages" in the navigation on the left side.
 5. From the source drop down, select the "main" branch and save.
