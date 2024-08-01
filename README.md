@@ -61,12 +61,13 @@ I have young children.. So when I mentioned the possibility of making a memory g
   #### Returning Visitor Goals
 
   - I LOVE Bluey and I can't get enough!
-  - Explore the site, look at the useful link's that show you everything Bluey!
+  - I want more information on Bluey.
+  - I want to use a variety of different devices.
 
   #### Frequent Visitor Goals
 
   - I LOVE Bluey and I can't get enough!
-  - Playing the memory game - Simple design with a nice pop-up that gives that gratification upon completion.
+  - I want to play the GAME!
 
   ***
 

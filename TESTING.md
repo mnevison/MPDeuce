@@ -83,3 +83,27 @@ _Lighthouse results range from 0-100. Ranges 0-49 are seen as "poor" 50-89 are c
 ## Manual Testing
 
 ### Testing User Stories
+
+**First Time Visitor Goals**
+
+| Goals                                              | How are requirements met?                                                                                                                                                      |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| I LOVE Bluey and I can't get enough! | This website has LOTS of Bluey related content |
+| I want something to entertain my kids!| The site is easy to use and accessible. It contains information on the characters kids love, as well as a game that can provide lots of fun. |
+| I want to find my way around the site easily       | Each page of the website, regardless of device has a dedicated navbar at the top of the page. The page title can also be interacted with to bring users back to the home page. |
+
+**Returning Visitor Goals**
+
+| Goals                                                              | How are requirements met?                                                                                                  |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| I LOVE Bluey and I can't get enough! | Who doesn't, right? Again, Lots of Bluey here!. |
+| I want more information on Bluey. | The site footer contains links to a wealth of Bluey related content. |
+
+**Frequent Visitor Goals**
+
+| Goals                                                                   | How are requirements met?                                                                                                                                                                                                                                                                                                      |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| I LOVE Bluey and I can't get enough!  | .. We get it. You love Bluey! |
+| I want to play the GAME! | The game can be accessed via the navigation on any device, has a reset button for when you get that initial dopamine hit, you can just keep going! |
+
+--- 
